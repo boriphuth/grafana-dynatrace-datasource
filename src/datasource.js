@@ -9,9 +9,12 @@ export default class DynatraceDatasource {
     this.id = instanceSettings.jsonData.id;
     this.token = instanceSettings.jsonData.token;
 
-    this.url = `${instanceSettings.url}/e/${this.id}/api/v1/timeseries`;
+    // this.url = `${instanceSettings.url}/e/${this.id}/api/v1/timeseries`;
+    this.url = `${instanceSettings.url}/api/v1/timeseries`;
 
-    this.headers = { Authorization: `Api-Token ${this.token}` };
+    // this.headers = { Authorization: `Api-Token ${this.token}` };
+    this.headers = { 'Content-Type': 'application/json' };
+    this.headers.Authorization = `Api-Token ${this.token}`;
 
     this.backendSrv = backendSrv;
     this.templateSrv = templateSrv;

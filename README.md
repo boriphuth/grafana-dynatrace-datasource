@@ -22,9 +22,7 @@ Checkout in `grafana/data/plugins`, run the commands listed in "Dev setup" and r
 ### Dev setup
 
 ```
-npm install yarn
-./node_modules/yarn/bin/yarn install
-npm run build
+npm install yarn && ./node_modules/yarn/bin/yarn install && npm run build
 ```
 
 ## Building a custom Grafana image
